@@ -45,20 +45,20 @@ void insertleft()
     while(cur!=NULL)
     {
         if(cur->info==key && cur==first)
-    {
-    temp->rlink=cur;
-    cur->llink=temp;
-    first=temp;
-    return;
-    }
-    if(cur->info==key)
-    {
-        temp->rlink=cur;
-        cur->llink=temp;
-        temp->llink=prev;
-        prev->rlink=temp;
-        return;
-    }
+            {
+            temp->rlink=cur;
+            cur->llink=temp;
+            first=temp;
+            return;
+            }
+        if(cur->info==key)
+            {
+                temp->rlink=cur;
+                cur->llink=temp;
+                temp->llink=prev;
+                prev->rlink=temp;
+                return;
+            }
     prev=cur;
     cur=cur->rlink;
     }
