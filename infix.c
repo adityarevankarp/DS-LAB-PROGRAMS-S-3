@@ -49,7 +49,7 @@ void main( )
         }
         else
         {
-            while(prior(stack[top]) == prior(infix[i]))
+            while(prior(stack[top]) >= prior(infix[i]))
                 postfix[j++]=pop( );
             push(infix[i]);
         }
